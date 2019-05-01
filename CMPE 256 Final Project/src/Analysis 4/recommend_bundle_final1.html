@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Content_based_recommendation</title>
+<title>recommend_bundle_final1</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13116,14 +13116,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Import user items data from json to csv and then to data frame</p>
+<p>Import user item data from json file to data frame</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
@@ -13156,7 +13156,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
@@ -13197,14 +13197,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Import user review data to csv and then to data frame</p>
+<p>Import user review data into csv and then to data frame</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
@@ -13237,7 +13237,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
@@ -13278,14 +13278,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Merge items data and review data</p>
+<p>Merge user itema and user reviews based on user id and item id</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">user_reviews_df</span><span class="p">,</span> <span class="n">users_items_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
@@ -13302,7 +13302,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13387,14 +13387,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>IMport bundle data from which we will get genre for items</p>
+<p>Import bundle data into df from json</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
@@ -13432,7 +13432,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
@@ -13472,7 +13472,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bundle_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span> 
@@ -13485,7 +13485,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merged_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span> 
@@ -13499,14 +13499,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Merge all data</p>
+<p>Merge all the data based on item_id</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">merged_df_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">merged_df</span><span class="p">,</span> <span class="n">bundle_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
@@ -13523,7 +13523,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -13644,17 +13644,1615 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Clean data</p>
+<p>Remove values not in right format</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cleaned_data</span><span class="o">=</span><span class="n">merged_df_final</span><span class="p">[(</span><span class="n">merged_df_final</span><span class="o">.</span><span class="n">item_id</span> <span class="o">!=</span> <span class="s1">&#39;200960,200980,200990,201000,201010&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">merged_df_final</span><span class="o">.</span><span class="n">item_id</span><span class="o">!=</span><span class="s1">&#39;42170,204731,204732&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">merged_df_final</span><span class="o">.</span><span class="n">item_id</span><span class="o">!=</span><span class="s1">&#39;10,80&#39;</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Create model_data i.e. training data having recommended values</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_data</span><span class="o">=</span><span class="n">cleaned_data</span><span class="p">[(</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s2">&quot;recommend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">())]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model_data</span><span class="o">=</span><span class="n">model_data</span><span class="p">[[</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span><span class="s1">&#39;recommend&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">surprise</span> <span class="k">import</span> <span class="n">Dataset</span>
+<span class="kn">from</span> <span class="nn">surprise</span> <span class="k">import</span> <span class="n">accuracy</span>
+<span class="kn">from</span> <span class="nn">surprise</span> <span class="k">import</span> <span class="n">Reader</span>
+<span class="kn">from</span> <span class="nn">surprise</span> <span class="k">import</span> <span class="n">BaselineOnly</span>
+<span class="kn">from</span> <span class="nn">surprise</span> <span class="k">import</span> <span class="n">KNNBasic</span>
+<span class="kn">from</span> <span class="nn">surprise</span> <span class="k">import</span> <span class="n">SVDpp</span>
+<span class="kn">from</span> <span class="nn">surprise</span> <span class="k">import</span> <span class="n">SVD</span>
+<span class="kn">from</span> <span class="nn">surprise.prediction_algorithms.matrix_factorization</span> <span class="k">import</span> <span class="n">NMF</span>
+<span class="kn">from</span> <span class="nn">surprise.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">surprise.model_selection</span> <span class="k">import</span> <span class="n">ShuffleSplit</span>
+<span class="kn">from</span> <span class="nn">surprise.model_selection</span> <span class="k">import</span> <span class="n">RepeatedKFold</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reader</span> <span class="o">=</span> <span class="n">Reader</span><span class="p">(</span><span class="n">rating_scale</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">data</span><span class="o">=</span><span class="n">Dataset</span><span class="o">.</span><span class="n">load_from_df</span><span class="p">(</span><span class="n">model_data</span><span class="p">,</span><span class="n">reader</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sp</span><span class="o">=</span><span class="n">ShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Apply SVD to model data</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">algo</span> <span class="o">=</span> <span class="n">SVD</span><span class="p">(</span><span class="n">n_factors</span><span class="o">=</span><span class="mi">246</span><span class="p">,</span><span class="n">n_epochs</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span><span class="n">lr_all</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span><span class="n">reg_qi</span><span class="o">=</span><span class="mf">0.080</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">init_std_dev</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">trainset</span><span class="p">,</span> <span class="n">testset</span> <span class="ow">in</span> <span class="n">sp</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+
+    <span class="c1"># train and test algorithm.</span>
+    <span class="n">algo</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">trainset</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">algo</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">testset</span><span class="p">)</span>
+
+    <span class="c1"># Compute and print Root Mean Squared Error</span>
+    <span class="n">accuracy</span><span class="o">.</span><span class="n">rmse</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>RMSE: 0.3047
+RMSE: 0.3088
+RMSE: 0.2992
+RMSE: 0.3080
+RMSE: 0.3062
+RMSE: 0.3033
+RMSE: 0.3098
+RMSE: 0.3053
+RMSE: 0.3089
+RMSE: 0.3137
+RMSE: 0.3098
+RMSE: 0.2977
+RMSE: 0.3050
+RMSE: 0.3041
+RMSE: 0.3052
+RMSE: 0.3043
+RMSE: 0.3077
+RMSE: 0.3047
+RMSE: 0.3034
+RMSE: 0.3056
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>take all the NaN values to predict_data so that they can be predicted based on model</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predict_data</span><span class="o">=</span><span class="n">cleaned_data</span><span class="p">[(</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s2">&quot;recommend&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">())]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predict_data</span><span class="o">=</span><span class="n">predict_data</span><span class="p">[[</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span><span class="s1">&#39;recommend&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Predict recommend value True(1) or False(0)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="n">predict_data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="n">predR</span><span class="o">=</span><span class="n">algo</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">uid</span><span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;user_id&quot;</span><span class="p">],</span> <span class="n">iid</span><span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">])</span>
+        <span class="n">row</span><span class="p">[</span><span class="s2">&quot;recommend&quot;</span><span class="p">]</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">predR</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
+        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Drop duplicate values</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predict_data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>item_id</th>
+      <th>recommend</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>102</th>
+      <td>76561198002820828</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>76561198028483487</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>76561198079362142</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>76561198042335464</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>coolslayer666</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>DakkeR</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>Letachal</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>76561197967443671</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>lasle</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>RoastedMemesRoastedDreams</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>FluffehTurtlex3</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>mikeytyson</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>lavox</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>76561198063132788</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>76561198098482126</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>Wallfinstein</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>AeiouLmao</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>76561197993591260</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>pwnerer42</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>76561198043206105</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>ItzDazaMan</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>76561198035999413</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>76561198053306375</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>76561198069755416</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>76561198103433951</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>76561198059622971</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>76561198049868012</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>76561198063513853</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>76561198053308580</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>jikarta</td>
+      <td>1250</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>104005</th>
+      <td>NaN</td>
+      <td>297650</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104006</th>
+      <td>NaN</td>
+      <td>374500</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104007</th>
+      <td>NaN</td>
+      <td>415700</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104008</th>
+      <td>NaN</td>
+      <td>415710</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104009</th>
+      <td>NaN</td>
+      <td>451050</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104010</th>
+      <td>NaN</td>
+      <td>464410</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104011</th>
+      <td>NaN</td>
+      <td>464420</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104012</th>
+      <td>NaN</td>
+      <td>464430</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104013</th>
+      <td>NaN</td>
+      <td>312290</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104014</th>
+      <td>NaN</td>
+      <td>385511</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104015</th>
+      <td>NaN</td>
+      <td>409190</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104016</th>
+      <td>NaN</td>
+      <td>409191</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104017</th>
+      <td>NaN</td>
+      <td>409192</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104018</th>
+      <td>NaN</td>
+      <td>409193</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104019</th>
+      <td>NaN</td>
+      <td>409194</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104020</th>
+      <td>NaN</td>
+      <td>409200</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104021</th>
+      <td>NaN</td>
+      <td>409201</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104022</th>
+      <td>NaN</td>
+      <td>409202</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104023</th>
+      <td>NaN</td>
+      <td>409203</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104024</th>
+      <td>NaN</td>
+      <td>409204</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104025</th>
+      <td>NaN</td>
+      <td>409240</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104026</th>
+      <td>NaN</td>
+      <td>409653</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104027</th>
+      <td>NaN</td>
+      <td>288610</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104028</th>
+      <td>NaN</td>
+      <td>424000</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104029</th>
+      <td>NaN</td>
+      <td>432600</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104030</th>
+      <td>NaN</td>
+      <td>466890</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104031</th>
+      <td>NaN</td>
+      <td>487610</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104032</th>
+      <td>NaN</td>
+      <td>385230</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104033</th>
+      <td>NaN</td>
+      <td>387880</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>104034</th>
+      <td>NaN</td>
+      <td>454130</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>85933 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Take all the unique user id and bundle id NaN to be predicted for every user in new df</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_predict</span><span class="o">=</span><span class="n">predict_data</span><span class="p">[[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_predict</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>102</th>
+      <td>76561198002820828</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>76561198028483487</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>76561198079362142</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>76561198042335464</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>coolslayer666</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>DakkeR</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>Letachal</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>76561197967443671</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>lasle</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>RoastedMemesRoastedDreams</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>FluffehTurtlex3</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>mikeytyson</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>lavox</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>76561198063132788</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>76561198098482126</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>Wallfinstein</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>AeiouLmao</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>76561197993591260</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>pwnerer42</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>76561198043206105</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>ItzDazaMan</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>76561198035999413</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>76561198053306375</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>76561198069755416</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>76561198103433951</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>76561198059622971</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>76561198049868012</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>76561198063513853</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>76561198053308580</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>jikarta</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>85554</th>
+      <td>76561198097845108</td>
+    </tr>
+    <tr>
+      <th>85557</th>
+      <td>bekxshot</td>
+    </tr>
+    <tr>
+      <th>85558</th>
+      <td>76561198097912387</td>
+    </tr>
+    <tr>
+      <th>85561</th>
+      <td>76561198098211858</td>
+    </tr>
+    <tr>
+      <th>85562</th>
+      <td>76561198098220237</td>
+    </tr>
+    <tr>
+      <th>85576</th>
+      <td>76561198100221350</td>
+    </tr>
+    <tr>
+      <th>85586</th>
+      <td>76561198101758215</td>
+    </tr>
+    <tr>
+      <th>85595</th>
+      <td>nicky202</td>
+    </tr>
+    <tr>
+      <th>85602</th>
+      <td>76561198103714736</td>
+    </tr>
+    <tr>
+      <th>85605</th>
+      <td>76561198104046608</td>
+    </tr>
+    <tr>
+      <th>85611</th>
+      <td>76561198104510756</td>
+    </tr>
+    <tr>
+      <th>85618</th>
+      <td>76561198105288060</td>
+    </tr>
+    <tr>
+      <th>85620</th>
+      <td>76561198105334971</td>
+    </tr>
+    <tr>
+      <th>85621</th>
+      <td>76561198105446794</td>
+    </tr>
+    <tr>
+      <th>85632</th>
+      <td>76561198106859306</td>
+    </tr>
+    <tr>
+      <th>85637</th>
+      <td>76561198107673568</td>
+    </tr>
+    <tr>
+      <th>85638</th>
+      <td>76561198107703555</td>
+    </tr>
+    <tr>
+      <th>85640</th>
+      <td>76561198107944439</td>
+    </tr>
+    <tr>
+      <th>85641</th>
+      <td>76561198108870487</td>
+    </tr>
+    <tr>
+      <th>85642</th>
+      <td>76561198108934716</td>
+    </tr>
+    <tr>
+      <th>85647</th>
+      <td>76561198111177004</td>
+    </tr>
+    <tr>
+      <th>85650</th>
+      <td>76561198112395264</td>
+    </tr>
+    <tr>
+      <th>85670</th>
+      <td>5weetness</td>
+    </tr>
+    <tr>
+      <th>88101</th>
+      <td>Dickensrock</td>
+    </tr>
+    <tr>
+      <th>89792</th>
+      <td>76561198090449014</td>
+    </tr>
+    <tr>
+      <th>90381</th>
+      <td>RaulRiffo</td>
+    </tr>
+    <tr>
+      <th>98227</th>
+      <td>76561198063914266</td>
+    </tr>
+    <tr>
+      <th>99564</th>
+      <td>76561198102096949</td>
+    </tr>
+    <tr>
+      <th>102622</th>
+      <td>76561198068100397</td>
+    </tr>
+    <tr>
+      <th>103715</th>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>1797 rows × 1 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_predict</span><span class="o">=</span><span class="n">bundle_predict</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">bundle_id</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Take bundle_id item_id user_id and recommend value in bundle_details for bundle_prediction</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_details</span><span class="o">=</span><span class="n">cleaned_data</span><span class="p">[[</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_details</span><span class="o">=</span><span class="n">bundle_details</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_details</span><span class="o">=</span><span class="n">bundle_details</span><span class="p">[</span><span class="n">bundle_details</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_details</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>item_id</th>
+      <th>bundle_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1250</td>
+      <td>612.0</td>
+    </tr>
+    <tr>
+      <th>967</th>
+      <td>730</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>18590</th>
+      <td>8930</td>
+      <td>575.0</td>
+    </tr>
+    <tr>
+      <th>22747</th>
+      <td>49520</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>25702</th>
+      <td>261640</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>26163</th>
+      <td>265930</td>
+      <td>374.0</td>
+    </tr>
+    <tr>
+      <th>29740</th>
+      <td>313740</td>
+      <td>710.0</td>
+    </tr>
+    <tr>
+      <th>29796</th>
+      <td>330830</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>29834</th>
+      <td>240</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>31466</th>
+      <td>289130</td>
+      <td>448.0</td>
+    </tr>
+    <tr>
+      <th>34057</th>
+      <td>237930</td>
+      <td>983.0</td>
+    </tr>
+    <tr>
+      <th>36886</th>
+      <td>107100</td>
+      <td>983.0</td>
+    </tr>
+    <tr>
+      <th>37179</th>
+      <td>225540</td>
+      <td>241.0</td>
+    </tr>
+    <tr>
+      <th>38102</th>
+      <td>207140</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>38103</th>
+      <td>207140</td>
+      <td>435.0</td>
+    </tr>
+    <tr>
+      <th>42014</th>
+      <td>269210</td>
+      <td>476.0</td>
+    </tr>
+    <tr>
+      <th>42678</th>
+      <td>220700</td>
+      <td>342.0</td>
+    </tr>
+    <tr>
+      <th>46264</th>
+      <td>12750</td>
+      <td>249.0</td>
+    </tr>
+    <tr>
+      <th>48054</th>
+      <td>427250</td>
+      <td>1146.0</td>
+    </tr>
+    <tr>
+      <th>48055</th>
+      <td>427250</td>
+      <td>758.0</td>
+    </tr>
+    <tr>
+      <th>48068</th>
+      <td>497850</td>
+      <td>1146.0</td>
+    </tr>
+    <tr>
+      <th>48923</th>
+      <td>383150</td>
+      <td>320.0</td>
+    </tr>
+    <tr>
+      <th>49727</th>
+      <td>282800</td>
+      <td>728.0</td>
+    </tr>
+    <tr>
+      <th>50645</th>
+      <td>390730</td>
+      <td>728.0</td>
+    </tr>
+    <tr>
+      <th>51930</th>
+      <td>402180</td>
+      <td>710.0</td>
+    </tr>
+    <tr>
+      <th>56259</th>
+      <td>235540</td>
+      <td>1206.0</td>
+    </tr>
+    <tr>
+      <th>56783</th>
+      <td>203830</td>
+      <td>461.0</td>
+    </tr>
+    <tr>
+      <th>57531</th>
+      <td>237990</td>
+      <td>335.0</td>
+    </tr>
+    <tr>
+      <th>59000</th>
+      <td>353370</td>
+      <td>1351.0</td>
+    </tr>
+    <tr>
+      <th>59001</th>
+      <td>353370</td>
+      <td>353.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>104005</th>
+      <td>297650</td>
+      <td>448.0</td>
+    </tr>
+    <tr>
+      <th>104006</th>
+      <td>374500</td>
+      <td>448.0</td>
+    </tr>
+    <tr>
+      <th>104007</th>
+      <td>415700</td>
+      <td>448.0</td>
+    </tr>
+    <tr>
+      <th>104008</th>
+      <td>415710</td>
+      <td>448.0</td>
+    </tr>
+    <tr>
+      <th>104009</th>
+      <td>451050</td>
+      <td>448.0</td>
+    </tr>
+    <tr>
+      <th>104010</th>
+      <td>464410</td>
+      <td>468.0</td>
+    </tr>
+    <tr>
+      <th>104011</th>
+      <td>464420</td>
+      <td>468.0</td>
+    </tr>
+    <tr>
+      <th>104012</th>
+      <td>464430</td>
+      <td>468.0</td>
+    </tr>
+    <tr>
+      <th>104013</th>
+      <td>312290</td>
+      <td>476.0</td>
+    </tr>
+    <tr>
+      <th>104014</th>
+      <td>385511</td>
+      <td>476.0</td>
+    </tr>
+    <tr>
+      <th>104015</th>
+      <td>409190</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104016</th>
+      <td>409191</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104017</th>
+      <td>409192</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104018</th>
+      <td>409193</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104019</th>
+      <td>409194</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104020</th>
+      <td>409200</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104021</th>
+      <td>409201</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104022</th>
+      <td>409202</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104023</th>
+      <td>409203</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104024</th>
+      <td>409204</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104025</th>
+      <td>409240</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104026</th>
+      <td>409653</td>
+      <td>491.0</td>
+    </tr>
+    <tr>
+      <th>104027</th>
+      <td>288610</td>
+      <td>571.0</td>
+    </tr>
+    <tr>
+      <th>104028</th>
+      <td>424000</td>
+      <td>581.0</td>
+    </tr>
+    <tr>
+      <th>104029</th>
+      <td>432600</td>
+      <td>581.0</td>
+    </tr>
+    <tr>
+      <th>104030</th>
+      <td>466890</td>
+      <td>581.0</td>
+    </tr>
+    <tr>
+      <th>104031</th>
+      <td>487610</td>
+      <td>581.0</td>
+    </tr>
+    <tr>
+      <th>104032</th>
+      <td>385230</td>
+      <td>594.0</td>
+    </tr>
+    <tr>
+      <th>104033</th>
+      <td>387880</td>
+      <td>594.0</td>
+    </tr>
+    <tr>
+      <th>104034</th>
+      <td>454130</td>
+      <td>594.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>507 rows × 2 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_details</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bundle_details</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>bundle_count df to maintain count of items in every bundle for a user that has true value</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_count</span><span class="o">=</span><span class="n">bundle_details</span><span class="p">[[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_count</span><span class="o">=</span><span class="n">bundle_count</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_count</span><span class="o">=</span><span class="n">bundle_count</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">predict_data</span><span class="p">,</span> <span class="n">bundle_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+<span class="n">pred_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[35]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>item_id</th>
+      <th>recommend</th>
+      <th>bundle_id</th>
+      <th>genre</th>
+      <th>discounted_price</th>
+      <th>bundle_final_price</th>
+      <th>bundle_price</th>
+      <th>bundle_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>76561198002820828</td>
+      <td>1250</td>
+      <td>1.0</td>
+      <td>612</td>
+      <td>Action</td>
+      <td>$19.99</td>
+      <td>$67.20</td>
+      <td>$167.78</td>
+      <td>Killing Floor 1 Complete Your Set!</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>76561198028483487</td>
+      <td>1250</td>
+      <td>1.0</td>
+      <td>612</td>
+      <td>Action</td>
+      <td>$19.99</td>
+      <td>$67.20</td>
+      <td>$167.78</td>
+      <td>Killing Floor 1 Complete Your Set!</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>76561198079362142</td>
+      <td>1250</td>
+      <td>1.0</td>
+      <td>612</td>
+      <td>Action</td>
+      <td>$19.99</td>
+      <td>$67.20</td>
+      <td>$167.78</td>
+      <td>Killing Floor 1 Complete Your Set!</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>76561198042335464</td>
+      <td>1250</td>
+      <td>1.0</td>
+      <td>612</td>
+      <td>Action</td>
+      <td>$19.99</td>
+      <td>$67.20</td>
+      <td>$167.78</td>
+      <td>Killing Floor 1 Complete Your Set!</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>coolslayer666</td>
+      <td>1250</td>
+      <td>1.0</td>
+      <td>612</td>
+      <td>Action</td>
+      <td>$19.99</td>
+      <td>$67.20</td>
+      <td>$167.78</td>
+      <td>Killing Floor 1 Complete Your Set!</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="p">[[</span><span class="s1">&#39;user_id&#39;</span><span class="p">,</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">,</span><span class="s1">&#39;recommend&#39;</span><span class="p">]]</span>
 </pre></div>
 
     </div>
@@ -13667,7 +15265,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">=</span><span class="n">cleaned_data</span><span class="p">[[</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span><span class="s1">&#39;genre&#39;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred_data</span><span class="o">=</span><span class="n">pred_data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13680,74 +15278,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred_data1</span><span class="o">=</span><span class="n">pred_data</span><span class="p">[</span><span class="n">pred_data</span><span class="o">.</span><span class="n">recommend</span><span class="o">==</span><span class="s1">&#39;1.0&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>item_id</th>
-      <th>genre</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>104032</td>
-      <td>6442</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>6326</td>
-      <td>76</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>730</td>
-      <td>Action</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>2059</td>
-      <td>3018</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13757,7 +15291,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred_data1</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pred_data1</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13770,16 +15304,18 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\Kriti\Anaconda3\lib\site-packages\ipykernel_launcher.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>array([&#39;1250&#39;, &#39;22200&#39;, &#39;43110&#39;, ..., &#39;385230&#39;, &#39;387880&#39;, &#39;454130&#39;],
-      dtype=object)</pre>
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -13791,7 +15327,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">=</span><span class="n">new_data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_predict</span><span class="o">=</span><span class="n">bundle_predict</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13804,463 +15340,61 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_predict</span><span class="o">=</span><span class="n">bundle_predict</span><span class="p">[</span><span class="n">bundle_predict</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[41]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>item_id</th>
-      <th>genre</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1250</td>
-      <td>Action</td>
-    </tr>
-    <tr>
-      <th>369</th>
-      <td>22200</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>390</th>
-      <td>43110</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>573</th>
-      <td>211420</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>719</th>
-      <td>211820</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
 </div>
-</div>
-
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below logic will get bundle_id corresponding to every user</p>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">=</span><span class="n">new_data</span><span class="p">[(</span><span class="n">new_data</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">())]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="n">bundle_predict</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="n">user</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span>
+        <span class="n">bundle_count</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+        
+        
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">row_rec</span> <span class="ow">in</span> <span class="n">pred_data1</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="k">if</span> <span class="p">((</span><span class="n">row_rec</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">user</span><span class="p">)):</span>
+             
+                <span class="n">item</span><span class="o">=</span><span class="n">row_rec</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]</span>
+                <span class="n">bundle_count</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bundle_count</span><span class="o">.</span><span class="n">bundle_id</span> <span class="o">==</span> <span class="p">(</span><span class="n">row_rec</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;.0&quot;</span><span class="p">),</span> <span class="s1">&#39;count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bundle_count</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bundle_count</span><span class="o">.</span><span class="n">bundle_id</span> <span class="o">==</span> <span class="p">(</span><span class="n">row_rec</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;.0&quot;</span><span class="p">),</span> <span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+                
+        <span class="n">bundle_count</span><span class="o">=</span><span class="n">bundle_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+       
+        <span class="n">bundle_predict</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bundle_predict</span><span class="o">.</span><span class="n">user_id</span><span class="o">==</span><span class="n">user</span><span class="p">,</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">bundle_count</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span>
+        
+      
+      
+    
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Item Id with genre</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_final_predict</span><span class="o">=</span><span class="n">bundle_predict</span><span class="p">[</span><span class="n">bundle_predict</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[43]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>item_id</th>
-      <th>genre</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1250</td>
-      <td>Action</td>
-    </tr>
-    <tr>
-      <th>967</th>
-      <td>730</td>
-      <td>Action</td>
-    </tr>
-    <tr>
-      <th>18590</th>
-      <td>8930</td>
-      <td>Strategy</td>
-    </tr>
-    <tr>
-      <th>22747</th>
-      <td>49520</td>
-      <td>Action, RPG</td>
-    </tr>
-    <tr>
-      <th>25702</th>
-      <td>261640</td>
-      <td>Action, RPG</td>
-    </tr>
-    <tr>
-      <th>26163</th>
-      <td>265930</td>
-      <td>Casual, Indie, Simulation</td>
-    </tr>
-    <tr>
-      <th>29740</th>
-      <td>313740</td>
-      <td>Indie</td>
-    </tr>
-    <tr>
-      <th>29796</th>
-      <td>330830</td>
-      <td>Adventure</td>
-    </tr>
-    <tr>
-      <th>29834</th>
-      <td>240</td>
-      <td>Action</td>
-    </tr>
-    <tr>
-      <th>31466</th>
-      <td>289130</td>
-      <td>Indie, RPG, Strategy</td>
-    </tr>
-    <tr>
-      <th>34057</th>
-      <td>237930</td>
-      <td>Action, Indie, RPG</td>
-    </tr>
-    <tr>
-      <th>36886</th>
-      <td>107100</td>
-      <td>Action, Indie, RPG</td>
-    </tr>
-    <tr>
-      <th>37179</th>
-      <td>225540</td>
-      <td>Action, Adventure</td>
-    </tr>
-    <tr>
-      <th>38102</th>
-      <td>207140</td>
-      <td>Action, Casual, Indie, Racing, Sports</td>
-    </tr>
-    <tr>
-      <th>42014</th>
-      <td>269210</td>
-      <td>Action, Adventure, Indie, Massively Multiplaye...</td>
-    </tr>
-    <tr>
-      <th>42678</th>
-      <td>220700</td>
-      <td>Design &amp; Illustration, Web Publishing</td>
-    </tr>
-    <tr>
-      <th>46264</th>
-      <td>12750</td>
-      <td>Racing</td>
-    </tr>
-    <tr>
-      <th>48054</th>
-      <td>427250</td>
-      <td>Indie, Simulation, Strategy</td>
-    </tr>
-    <tr>
-      <th>48068</th>
-      <td>497850</td>
-      <td>Indie, Simulation, Strategy</td>
-    </tr>
-    <tr>
-      <th>48923</th>
-      <td>383150</td>
-      <td>Action</td>
-    </tr>
-    <tr>
-      <th>49727</th>
-      <td>282800</td>
-      <td>Indie, Strategy</td>
-    </tr>
-    <tr>
-      <th>50645</th>
-      <td>390730</td>
-      <td>Action, Indie</td>
-    </tr>
-    <tr>
-      <th>51930</th>
-      <td>402180</td>
-      <td>Casual, Indie</td>
-    </tr>
-    <tr>
-      <th>56259</th>
-      <td>235540</td>
-      <td>Action, Indie</td>
-    </tr>
-    <tr>
-      <th>56783</th>
-      <td>203830</td>
-      <td>Adventure, Indie</td>
-    </tr>
-    <tr>
-      <th>57531</th>
-      <td>237990</td>
-      <td>Indie, RPG, Strategy</td>
-    </tr>
-    <tr>
-      <th>60335</th>
-      <td>339350</td>
-      <td>Indie, RPG</td>
-    </tr>
-    <tr>
-      <th>60648</th>
-      <td>337000</td>
-      <td>Action, RPG</td>
-    </tr>
-    <tr>
-      <th>61037</th>
-      <td>263400</td>
-      <td>Adventure, Indie, Strategy</td>
-    </tr>
-    <tr>
-      <th>63817</th>
-      <td>8980</td>
-      <td>Action, RPG</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>88038</th>
-      <td>24800</td>
-      <td>Strategy</td>
-    </tr>
-    <tr>
-      <th>88940</th>
-      <td>42120</td>
-      <td>Action</td>
-    </tr>
-    <tr>
-      <th>91205</th>
-      <td>314450</td>
-      <td>Action, Adventure, Indie, RPG, Strategy</td>
-    </tr>
-    <tr>
-      <th>91296</th>
-      <td>333740</td>
-      <td>Indie, Early Access</td>
-    </tr>
-    <tr>
-      <th>91306</th>
-      <td>340070</td>
-      <td>Action, Adventure, Casual, Indie, Strategy</td>
-    </tr>
-    <tr>
-      <th>91357</th>
-      <td>349500</td>
-      <td>Indie, RPG, Simulation</td>
-    </tr>
-    <tr>
-      <th>91411</th>
-      <td>360380</td>
-      <td>Adventure, Casual, Indie, Simulation, Strategy</td>
-    </tr>
-    <tr>
-      <th>91508</th>
-      <td>364270</td>
-      <td>Indie, RPG, Strategy</td>
-    </tr>
-    <tr>
-      <th>91673</th>
-      <td>416080</td>
-      <td>Action, Adventure, Casual, Indie, Simulation, ...</td>
-    </tr>
-    <tr>
-      <th>91708</th>
-      <td>429470</td>
-      <td>Adventure, Indie</td>
-    </tr>
-    <tr>
-      <th>91724</th>
-      <td>434420</td>
-      <td>Adventure, Indie, RPG</td>
-    </tr>
-    <tr>
-      <th>91924</th>
-      <td>462960</td>
-      <td>Adventure, Casual, Indie</td>
-    </tr>
-    <tr>
-      <th>91929</th>
-      <td>485220</td>
-      <td>Action, Casual, Indie, Strategy</td>
-    </tr>
-    <tr>
-      <th>92658</th>
-      <td>405970</td>
-      <td>Action, Adventure, Indie</td>
-    </tr>
-    <tr>
-      <th>92669</th>
-      <td>448640</td>
-      <td>Indie, RPG, Early Access</td>
-    </tr>
-    <tr>
-      <th>93658</th>
-      <td>296970</td>
-      <td>Adventure, Indie, RPG, Strategy</td>
-    </tr>
-    <tr>
-      <th>93951</th>
-      <td>78000</td>
-      <td>Strategy, Casual</td>
-    </tr>
-    <tr>
-      <th>94280</th>
-      <td>337850</td>
-      <td>Adventure, Indie, RPG, Strategy</td>
-    </tr>
-    <tr>
-      <th>94285</th>
-      <td>339190</td>
-      <td>Adventure, Indie</td>
-    </tr>
-    <tr>
-      <th>94499</th>
-      <td>380080</td>
-      <td>Audio Production</td>
-    </tr>
-    <tr>
-      <th>94677</th>
-      <td>258050</td>
-      <td>Action, Indie, Strategy</td>
-    </tr>
-    <tr>
-      <th>95040</th>
-      <td>316600</td>
-      <td>Action, Indie</td>
-    </tr>
-    <tr>
-      <th>95590</th>
-      <td>112100</td>
-      <td>RPG, Indie</td>
-    </tr>
-    <tr>
-      <th>95747</th>
-      <td>208400</td>
-      <td>Strategy, RPG, Indie</td>
-    </tr>
-    <tr>
-      <th>95963</th>
-      <td>206020</td>
-      <td>RPG, Indie</td>
-    </tr>
-    <tr>
-      <th>95968</th>
-      <td>206040</td>
-      <td>RPG, Indie</td>
-    </tr>
-    <tr>
-      <th>95973</th>
-      <td>206060</td>
-      <td>RPG, Indie</td>
-    </tr>
-    <tr>
-      <th>96094</th>
-      <td>218020</td>
-      <td>Strategy, RPG, Indie</td>
-    </tr>
-    <tr>
-      <th>96104</th>
-      <td>105000</td>
-      <td>Adventure, Indie</td>
-    </tr>
-    <tr>
-      <th>96869</th>
-      <td>402330</td>
-      <td>Action, Indie, Early Access</td>
-    </tr>
-  </tbody>
-</table>
-<p>100 rows × 2 columns</p>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14268,7 +15402,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Splitting genre with ,</p>
+<p>Unique bundle_id recommended</p>
 
 </div>
 </div>
@@ -14278,29 +15412,44 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="p">[</span><span class="s1">&#39;genre&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_data</span><span class="p">[</span><span class="s1">&#39;genre&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_final_predict</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;236.0&#39;, &#39;712.0&#39;, &#39;403.0&#39;, &#39;425.0&#39;, &#39;1303.0&#39;, &#39;612.0&#39;, &#39;951.0&#39;,
+       &#39;575.0&#39;, &#39;1418.0&#39;, &#39;728.0&#39;, &#39;461.0&#39;, &#39;1182.0&#39;, &#39;710.0&#39;, &#39;604.0&#39;,
+       &#39;249.0&#39;, &#39;374.0&#39;, &#39;1206.0&#39;, &#39;241.0&#39;, &#39;498.0&#39;, &#39;342.0&#39;, &#39;676.0&#39;,
+       &#39;448.0&#39;, &#39;758.0&#39;, &#39;577.0&#39;, &#39;335.0&#39;, &#39;501.0&#39;, &#39;296.0&#39;, &#39;320.0&#39;,
+       &#39;536.0&#39;], dtype=object)</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Indexing by item id</p>
+
+</div>
 
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;item_id&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">new_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_final_predict</span>
 </pre></div>
 
     </div>
@@ -14336,36 +15485,319 @@ div#notebook {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>genre</th>
-    </tr>
-    <tr>
-      <th>item_id</th>
-      <th></th>
+      <th>user_id</th>
+      <th>bundle_id</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>1250</th>
-      <td>[action]</td>
+      <th>102</th>
+      <td>76561198002820828</td>
+      <td>236.0</td>
     </tr>
     <tr>
-      <th>730</th>
-      <td>[action]</td>
+      <th>103</th>
+      <td>76561198028483487</td>
+      <td>236.0</td>
     </tr>
     <tr>
-      <th>8930</th>
-      <td>[strategy]</td>
+      <th>104</th>
+      <td>76561198079362142</td>
+      <td>236.0</td>
     </tr>
     <tr>
-      <th>49520</th>
-      <td>[action,  rpg]</td>
+      <th>105</th>
+      <td>76561198042335464</td>
+      <td>236.0</td>
     </tr>
     <tr>
-      <th>261640</th>
-      <td>[action,  rpg]</td>
+      <th>106</th>
+      <td>coolslayer666</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>DakkeR</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>Letachal</td>
+      <td>403.0</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>76561197967443671</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>lasle</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>RoastedMemesRoastedDreams</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>FluffehTurtlex3</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>mikeytyson</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>lavox</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>76561198063132788</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>76561198098482126</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>Wallfinstein</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>AeiouLmao</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>76561197993591260</td>
+      <td>1303.0</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>pwnerer42</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>76561198043206105</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>ItzDazaMan</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>76561198035999413</td>
+      <td>612.0</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>76561198053306375</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>76561198069755416</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>76561198103433951</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>76561198059622971</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>76561198049868012</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>76561198063513853</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>76561198053308580</td>
+      <td>236.0</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>jikarta</td>
+      <td>712.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>85550</th>
+      <td>76561198097102558</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85554</th>
+      <td>76561198097845108</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85557</th>
+      <td>bekxshot</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85558</th>
+      <td>76561198097912387</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85561</th>
+      <td>76561198098211858</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85562</th>
+      <td>76561198098220237</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85576</th>
+      <td>76561198100221350</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85586</th>
+      <td>76561198101758215</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85595</th>
+      <td>nicky202</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85602</th>
+      <td>76561198103714736</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85605</th>
+      <td>76561198104046608</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85611</th>
+      <td>76561198104510756</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85618</th>
+      <td>76561198105288060</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85620</th>
+      <td>76561198105334971</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85621</th>
+      <td>76561198105446794</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85632</th>
+      <td>76561198106859306</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85637</th>
+      <td>76561198107673568</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85638</th>
+      <td>76561198107703555</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85640</th>
+      <td>76561198107944439</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85641</th>
+      <td>76561198108870487</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85642</th>
+      <td>76561198108934716</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85647</th>
+      <td>76561198111177004</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85650</th>
+      <td>76561198112395264</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>85670</th>
+      <td>5weetness</td>
+      <td>425.0</td>
+    </tr>
+    <tr>
+      <th>88101</th>
+      <td>Dickensrock</td>
+      <td>951.0</td>
+    </tr>
+    <tr>
+      <th>89792</th>
+      <td>76561198090449014</td>
+      <td>951.0</td>
+    </tr>
+    <tr>
+      <th>90381</th>
+      <td>RaulRiffo</td>
+      <td>951.0</td>
+    </tr>
+    <tr>
+      <th>98227</th>
+      <td>76561198063914266</td>
+      <td>951.0</td>
+    </tr>
+    <tr>
+      <th>99564</th>
+      <td>76561198102096949</td>
+      <td>951.0</td>
+    </tr>
+    <tr>
+      <th>102622</th>
+      <td>76561198068100397</td>
+      <td>951.0</td>
     </tr>
   </tbody>
 </table>
+<p>1796 rows × 2 columns</p>
 </div>
 </div>
 
@@ -14380,16 +15812,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span><span class="p">[</span><span class="s1">&#39;bag_of_words&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="n">columns</span> <span class="o">=</span> <span class="n">new_data</span><span class="o">.</span><span class="n">columns</span>
-<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">new_data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
-    <span class="n">words</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
-        <span class="n">words</span> <span class="o">=</span> <span class="n">words</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">col</span><span class="p">])</span><span class="o">+</span> <span class="s1">&#39; &#39;</span>
-
-    <span class="n">row</span><span class="p">[</span><span class="s1">&#39;bag_of_words&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">words</span>
-    
-<span class="n">new_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">new_data</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span><span class="o">!=</span> <span class="s1">&#39;bag_of_words&#39;</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_data1</span><span class="o">=</span><span class="n">cleaned_data</span><span class="p">[[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">,</span><span class="s1">&#39;bundle_name&#39;</span><span class="p">,</span><span class="s1">&#39;bundle_final_price&#39;</span><span class="p">]]</span>
 </pre></div>
 
     </div>
@@ -14397,30 +15820,12 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using sklearn count vectorizer performing content based cosine similarity</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="k">import</span> <span class="n">cosine_similarity</span>
-<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="k">import</span> <span class="n">CountVectorizer</span>
-
-<span class="c1"># instantiating and generating the count matrix</span>
-<span class="n">count</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
-<span class="n">count_matrix</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">new_data</span><span class="p">[</span><span class="s1">&#39;bag_of_words&#39;</span><span class="p">])</span>
-
-<span class="c1"># creating a Series for the game id so they are associated to an ordered numerical</span>
-<span class="c1"># list I will use later to match the indexes</span>
-<span class="n">indices</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">new_data</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-<span class="n">indices</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp_data1</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_data1</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14433,20 +15838,18 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[47]:</div>
+    <div class="prompt"></div>
 
 
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\Kriti\Anaconda3\lib\site-packages\ipykernel_launcher.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
 
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0      1250
-1       730
-2      8930
-3     49520
-4    261640
-Name: item_id, dtype: object</pre>
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14458,9 +15861,8 @@ Name: item_id, dtype: object</pre>
 <div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># generating the cosine similarity matrix</span>
-<span class="n">cosine_sim</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">count_matrix</span><span class="p">,</span> <span class="n">count_matrix</span><span class="p">)</span>
-<span class="n">cosine_sim</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">recommend_bundle1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">bundle_final_predict</span><span class="p">,</span> <span class="n">temp_data1</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+<span class="n">recommend_bundle1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14477,21 +15879,70 @@ Name: item_id, dtype: object</pre>
 
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>array([[1.        , 1.        , 0.        , ..., 0.57735027, 0.57735027,
-        0.70710678],
-       [1.        , 1.        , 0.        , ..., 0.57735027, 0.57735027,
-        0.70710678],
-       [0.        , 0.        , 1.        , ..., 0.        , 0.        ,
-        0.        ],
-       ...,
-       [0.57735027, 0.57735027, 0.        , ..., 1.        , 1.        ,
-        0.81649658],
-       [0.57735027, 0.57735027, 0.        , ..., 1.        , 1.        ,
-        0.81649658],
-       [0.70710678, 0.70710678, 0.        , ..., 0.81649658, 0.81649658,
-        1.        ]])</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>bundle_id</th>
+      <th>bundle_name</th>
+      <th>bundle_final_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>76561198002820828</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>76561198002820828</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>76561198002820828</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>76561198002820828</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>76561198002820828</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -14499,39 +15950,13 @@ Name: item_id, dtype: object</pre>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Function with input item id and output top 10 similar games</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># function that takes in game id as input and returns the top 10 recommended games</span>
-<span class="k">def</span> <span class="nf">recommendations</span><span class="p">(</span><span class="n">item_id</span><span class="p">,</span> <span class="n">cosine_sim</span> <span class="o">=</span> <span class="n">cosine_sim</span><span class="p">):</span>
-    
-    <span class="n">recommended_games</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="c1"># gettin the index of the games that matches the id</span>
-    <span class="n">idx</span> <span class="o">=</span> <span class="n">indices</span><span class="p">[</span><span class="n">indices</span> <span class="o">==</span> <span class="n">item_id</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-    <span class="c1"># creating a Series with the similarity scores in descending order</span>
-    <span class="n">score_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">cosine_sim</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-
-    <span class="c1"># getting the indexes of the 10 most similar games</span>
-    <span class="n">top_10_indexes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">score_series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
-    
-    <span class="c1"># populating the list with the titles of the best 10 matching games</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">top_10_indexes</span><span class="p">:</span>
-        <span class="n">recommended_games</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">new_data</span><span class="o">.</span><span class="n">index</span><span class="p">)[</span><span class="n">i</span><span class="p">])</span>
-        
-    <span class="k">return</span> <span class="n">recommended_games</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">recommend_bundle1</span><span class="o">=</span><span class="n">recommend_bundle1</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14542,17 +15967,17 @@ Name: item_id, dtype: object</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Game with id 1250 with top 10 similar games</p>
+<p>Final bundle recommendation with user_id, bundle_id, discounted_price</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">recommendations</span><span class="p">(</span><span class="s1">&#39;1250&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">recommend_bundle1</span>
 </pre></div>
 
     </div>
@@ -14565,22 +15990,589 @@ Name: item_id, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>bundle_id</th>
+      <th>bundle_name</th>
+      <th>bundle_final_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>76561198002820828</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>2595</th>
+      <td>76561198028483487</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>5190</th>
+      <td>76561198079362142</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>7785</th>
+      <td>76561198042335464</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>10380</th>
+      <td>coolslayer666</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>12975</th>
+      <td>76561197967443671</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>15570</th>
+      <td>lasle</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>18165</th>
+      <td>RoastedMemesRoastedDreams</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>20760</th>
+      <td>76561198098482126</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>23355</th>
+      <td>Wallfinstein</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>25950</th>
+      <td>AeiouLmao</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>28545</th>
+      <td>pwnerer42</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>31140</th>
+      <td>76561198043206105</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>33735</th>
+      <td>ItzDazaMan</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>36330</th>
+      <td>76561198053306375</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>38925</th>
+      <td>76561198069755416</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>41520</th>
+      <td>76561198103433951</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>44115</th>
+      <td>76561198059622971</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>46710</th>
+      <td>76561198049868012</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>49305</th>
+      <td>76561198063513853</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>51900</th>
+      <td>76561198053308580</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>54495</th>
+      <td>MOwneZ</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>57090</th>
+      <td>76561198073043666</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>59685</th>
+      <td>MichaelE</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>62280</th>
+      <td>Fiendwithoutaface</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>64875</th>
+      <td>Baybam73</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>67470</th>
+      <td>76561198058865870</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>70065</th>
+      <td>76561198088844840</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>72660</th>
+      <td>peptides</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>75255</th>
+      <td>76561198069644041</td>
+      <td>236.0</td>
+      <td>Counter-Strike Complete</td>
+      <td>$29.22</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2587167</th>
+      <td>sergioxks1</td>
+      <td>498.0</td>
+      <td>Back In Time Bundle</td>
+      <td>$1.47</td>
+    </tr>
+    <tr>
+      <th>2587177</th>
+      <td>theunicornius</td>
+      <td>498.0</td>
+      <td>Back In Time Bundle</td>
+      <td>$1.47</td>
+    </tr>
+    <tr>
+      <th>2587187</th>
+      <td>thememeking</td>
+      <td>498.0</td>
+      <td>Back In Time Bundle</td>
+      <td>$1.47</td>
+    </tr>
+    <tr>
+      <th>2587197</th>
+      <td>_MAK_</td>
+      <td>342.0</td>
+      <td>RPG Maker VX Ace + SONAR Steam Edition Bundle</td>
+      <td>$127.48</td>
+    </tr>
+    <tr>
+      <th>2587214</th>
+      <td>76561198080303375</td>
+      <td>342.0</td>
+      <td>RPG Maker VX Ace + SONAR Steam Edition Bundle</td>
+      <td>$127.48</td>
+    </tr>
+    <tr>
+      <th>2587231</th>
+      <td>76561198029991313</td>
+      <td>342.0</td>
+      <td>RPG Maker VX Ace + SONAR Steam Edition Bundle</td>
+      <td>$127.48</td>
+    </tr>
+    <tr>
+      <th>2587248</th>
+      <td>76561198044138438</td>
+      <td>676.0</td>
+      <td>NEKOPARA complete edition</td>
+      <td>$20.67</td>
+    </tr>
+    <tr>
+      <th>2587293</th>
+      <td>ManyaManya</td>
+      <td>676.0</td>
+      <td>NEKOPARA complete edition</td>
+      <td>$20.67</td>
+    </tr>
+    <tr>
+      <th>2587338</th>
+      <td>miochandesu</td>
+      <td>676.0</td>
+      <td>NEKOPARA complete edition</td>
+      <td>$20.67</td>
+    </tr>
+    <tr>
+      <th>2587383</th>
+      <td>Marksinator</td>
+      <td>676.0</td>
+      <td>NEKOPARA complete edition</td>
+      <td>$20.67</td>
+    </tr>
+    <tr>
+      <th>2587428</th>
+      <td>Captain_Honey</td>
+      <td>676.0</td>
+      <td>NEKOPARA complete edition</td>
+      <td>$20.67</td>
+    </tr>
+    <tr>
+      <th>2587473</th>
+      <td>supercyborgs</td>
+      <td>676.0</td>
+      <td>NEKOPARA complete edition</td>
+      <td>$20.67</td>
+    </tr>
+    <tr>
+      <th>2587518</th>
+      <td>76561198059950511</td>
+      <td>676.0</td>
+      <td>NEKOPARA complete edition</td>
+      <td>$20.67</td>
+    </tr>
+    <tr>
+      <th>2587563</th>
+      <td>76561198017753094</td>
+      <td>448.0</td>
+      <td>Endless Legend Collection</td>
+      <td>$69.63</td>
+    </tr>
+    <tr>
+      <th>2587592</th>
+      <td>76561198065820870</td>
+      <td>758.0</td>
+      <td>8-Bit Armies Complete Edition</td>
+      <td>$19.52</td>
+    </tr>
+    <tr>
+      <th>2587601</th>
+      <td>76561198082812117</td>
+      <td>577.0</td>
+      <td>Homeworld Remastered Collection and Deserts of...</td>
+      <td>$63.73</td>
+    </tr>
+    <tr>
+      <th>2587616</th>
+      <td>76561197970982479</td>
+      <td>335.0</td>
+      <td>The Banner Saga Deluxe Pack</td>
+      <td>$39.72</td>
+    </tr>
+    <tr>
+      <th>2587643</th>
+      <td>76561198069366851</td>
+      <td>501.0</td>
+      <td>Puzzle Bundle</td>
+      <td>$2.47</td>
+    </tr>
+    <tr>
+      <th>2587674</th>
+      <td>fsdfdsggsgfdgsdgsdgsdggg</td>
+      <td>501.0</td>
+      <td>Puzzle Bundle</td>
+      <td>$2.47</td>
+    </tr>
+    <tr>
+      <th>2587705</th>
+      <td>76561198099992948</td>
+      <td>501.0</td>
+      <td>Puzzle Bundle</td>
+      <td>$2.47</td>
+    </tr>
+    <tr>
+      <th>2587736</th>
+      <td>76561198100966696</td>
+      <td>501.0</td>
+      <td>Puzzle Bundle</td>
+      <td>$2.47</td>
+    </tr>
+    <tr>
+      <th>2587767</th>
+      <td>76561198041215810</td>
+      <td>296.0</td>
+      <td>The Sparkle Bundle</td>
+      <td>$8.37</td>
+    </tr>
+    <tr>
+      <th>2587784</th>
+      <td>76561198043928101</td>
+      <td>296.0</td>
+      <td>The Sparkle Bundle</td>
+      <td>$8.37</td>
+    </tr>
+    <tr>
+      <th>2587801</th>
+      <td>M16Vampire</td>
+      <td>320.0</td>
+      <td>Dead Island Definitive Collection</td>
+      <td>$40.02</td>
+    </tr>
+    <tr>
+      <th>2587808</th>
+      <td>bicki6</td>
+      <td>320.0</td>
+      <td>Dead Island Definitive Collection</td>
+      <td>$40.02</td>
+    </tr>
+    <tr>
+      <th>2587815</th>
+      <td>76561198055374308</td>
+      <td>536.0</td>
+      <td>Stronghold Complete Pack</td>
+      <td>$49.98</td>
+    </tr>
+    <tr>
+      <th>2587834</th>
+      <td>76561198076276801</td>
+      <td>536.0</td>
+      <td>Stronghold Complete Pack</td>
+      <td>$49.98</td>
+    </tr>
+    <tr>
+      <th>2587853</th>
+      <td>76561198067168073</td>
+      <td>536.0</td>
+      <td>Stronghold Complete Pack</td>
+      <td>$49.98</td>
+    </tr>
+    <tr>
+      <th>2587872</th>
+      <td>fggdvurcy</td>
+      <td>536.0</td>
+      <td>Stronghold Complete Pack</td>
+      <td>$49.98</td>
+    </tr>
+    <tr>
+      <th>2587891</th>
+      <td>76561198072888260</td>
+      <td>536.0</td>
+      <td>Stronghold Complete Pack</td>
+      <td>$49.98</td>
+    </tr>
+  </tbody>
+</table>
+<p>1796 rows × 4 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bundle_df</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bundle_df</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Function when passed user id will provide output recommended bundle with items and discounted price</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">getBundleDetails</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Try using this bundle with your favorite items:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">row</span> <span class="ow">in</span> <span class="n">recommend_bundle1</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">user_id</span><span class="o">==</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]):</span>
+            <span class="n">bundle_id</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total bundle price: &quot;</span><span class="o">+</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;bundle_final_price&#39;</span><span class="p">])</span>
+            
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bundle contains following items with discounted price over each item as below:&quot;</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">row1</span> <span class="ow">in</span> <span class="n">bundle_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">bundle_id</span><span class="o">==</span><span class="p">(</span><span class="n">row1</span><span class="p">[</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;.0&quot;</span><span class="p">)):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;item id: &quot;</span><span class="o">+</span><span class="n">row1</span><span class="p">[</span><span class="s2">&quot;item_id&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot; discounted price on item with bundle: &quot;</span><span class="o">+</span><span class="n">row1</span><span class="p">[</span><span class="s2">&quot;discounted_price&quot;</span><span class="p">])</span>
+           
+    
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">getBundleDetails</span><span class="p">(</span><span class="s1">&#39;miochandesu&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Try using this bundle with your favorite items:
+Total bundle price: $20.67
+Bundle contains following items with discounted price over each item as below:
+item id: 333600 discounted price on item with bundle: $9.99
+item id: 385800 discounted price on item with bundle: $2.99
+item id: 420110 discounted price on item with bundle: $9.99
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">recommend_bundle1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;bundle_id&#39;</span><span class="p">)[</span><span class="s1">&#39;user_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
 
 
 
 
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;210932&#39;,
- &#39;359495&#39;,
- &#39;309991&#39;,
- &#39;359497&#39;,
- &#39;373540&#39;,
- &#39;411400&#39;,
- &#39;411401&#39;,
- &#39;1256&#39;,
- &#39;1257&#39;,
- &#39;35417&#39;]</pre>
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
 </div>
 
 </div>
